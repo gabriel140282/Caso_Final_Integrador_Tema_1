@@ -10,6 +10,26 @@ public class Animal {
     private int salud;
     private LocalDateTime horaUltimaComida;
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getEspecies() {
+        return especies;
+    }
+
+    public Habitat getHabitat() {
+        return habitat;
+    }
+
+    public int getSalud() {
+        return salud;
+    }
+
+    public LocalDateTime getHoraUltimaComida() {
+        return horaUltimaComida;
+    }
+
     public Animal(String nombre, String especies, Habitat habitat) {
         this.nombre = nombre;
         this.especies = especies;

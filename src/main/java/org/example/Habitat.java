@@ -29,7 +29,7 @@ public class Habitat {
         this.limpieza = limpieza;
     }
 
-    public void updateConditions(double temperatura, double humedad, String limpieza) {
+    public void actualizarCondiciones(double temperatura, double humedad, String limpieza) {
         this.temperatura = temperatura;
         this.humedad = humedad;
         this.limpieza = limpieza;
