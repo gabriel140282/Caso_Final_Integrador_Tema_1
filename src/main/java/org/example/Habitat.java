@@ -6,6 +6,22 @@ public class Habitat {
     private double humedad;
     private String limpieza;
 
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public double getTemperatura() {
+        return this.temperatura;
+    }
+
+    public double getHumedad() {
+        return this.humedad;
+    }
+
+    public String getLimpieza() {
+        return this.limpieza;
+    }
+
     public Habitat(String nombre, double temperatura, double humedad, String limpieza) {
         this.nombre = nombre;
         this.temperatura = temperatura;
