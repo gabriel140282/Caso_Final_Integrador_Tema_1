@@ -6,7 +6,7 @@ public class Aviario extends Habitat {
     }
 
     @Override
-    public void monitor() {
+    public void monitorAviario() {
         System.out.println("\nMonitoreando hábitat aviario: " + getNombre());
         System.out.println("Temperatura: " + getTemperatura() + "°C, Humedad: " + getHumedad() + "%, Limpieza: " + getLimpieza());
     }

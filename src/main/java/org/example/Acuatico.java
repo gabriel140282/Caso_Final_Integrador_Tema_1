@@ -9,7 +9,7 @@ public class Acuatico extends Habitat {
     }
 
     @Override
-    public void monitor() {
+    public void monitorAcuatico() {
         System.out.println("\nMonitoreando hábitat acuático: " + this.getNombre());
         System.out.println("Temperatura: " + this.getTemperatura() + "°C, Humedad: " + this.getHumedad() + "%, Limpieza: " + this.getLimpieza());
         System.out.println("Calidad de agua: " + this.calidadAgua);

@@ -36,7 +36,7 @@ public class Habitat {
         System.out.println("Se actualizaron las condiciones de " + nombre + ".");
     }
 
-    public void monitor() {
+    public void monitorHabitat() {
         System.out.println("\nHabitat: " + this.nombre);
         System.out.println("Temperatura: " + this.temperatura + "°C");
         System.out.println("Humedad: " + this.humedad + "%");

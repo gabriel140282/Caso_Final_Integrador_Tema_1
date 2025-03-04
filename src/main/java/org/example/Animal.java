@@ -47,7 +47,7 @@ public class Animal {
         System.out.println("La salud de " + nombre + " es " + salud + ".");
     }
 
-    public void performBehavior(){
+    public void monitorAnimal(){
         System.out.println("El comportamiento de " + this.nombre + " es: ");
         System.out.println("La especie es " + this.especies);
         System.out.println("El habitat es " + this.habitat);
