@@ -1,0 +1,113 @@
+@startuml
+
+' Definición de clases abstractas y sus subclases
+
+' MÓDULO: Gestión de Hábitats
+abstract class Habitat {
+    - name: String
+    - temperature: double
+    - humidity: double
+    - cleanliness: String
+    + updateConditions(temperature: double, humidity: double, cleanliness: String): void
+    + monitor(): void <<abstract>>
+}
+
+class Acuatico {
+    - waterQuality: String
+    + monitor(): void
+}
+
+class Terrestre {
+    + monitor(): void
+}
+
+class Aviario {
+    + monitor(): void
+}
+
+Habitat <|-- Acuatico
+Habitat <|-- Terrestre
+Habitat <|-- Aviario
+
+' MÓDULO: Cuidado de los Animales
+abstract class Animal {
+    - name: String
+    - species: String
+    - habitat: Habitat
+    - health: int
+    - lastFed: LocalDateTime
+    + feed(): void
+    + checkHealth(): void
+    + performBehavior(): void <<abstract>>
+}
+
+class Mamifero {
+    + performBehavior(): void
+}
+
+class Ave {
+    + performBehavior(): void
+}
+
+class Reptil {
+    + performBehavior(): void
+}
+
+Animal <|-- Mamifero
+Animal <|-- Ave
+Animal <|-- Reptil
+
+Animal --> Habitat : "vive en"
+
+' MÓDULO: Interacción con Visitantes
+class Visitor {
+    - name: String
+    - interests: List<String>
+}
+
+class VirtualGuide {
+    + provideTour(visitor: Visitor): void
+}
+
+VirtualGuide --> Visitor : "guía"
+
+' MÓDULO: Administración de Recursos
+class Resource {
+    - name: String
+    - quantity: int
+    - supplier: String
+}
+
+class Inventory {
+    - resources: Map<String, Resource>
+    + addResource(resource: Resource): void
+    + updateResource(name: String, quantity: int): void
+    + showInventory(): void
+}
+
+Inventory --> Resource : "contiene"
+
+' MÓDULO: Mantenimiento y Seguridad
+class MaintenanceTask {
+    - description: String
+    - scheduledDate: LocalDate
+    - status: String
+    + updateStatus(status: String): void
+}
+
+class MaintenanceManager {
+    - tasks: List<MaintenanceTask>
+    + scheduleTask(task: MaintenanceTask): void
+    + trackTasks(): void
+}
+
+class SecuritySystem {
+    - events: List<String>
+    + monitorAccess(): void
+    + recordEvents(): void
+}
+
+MaintenanceManager --> MaintenanceTask : "gestiona"
+SecuritySystem --> "registra" : "eventos"
+
+@enduml
