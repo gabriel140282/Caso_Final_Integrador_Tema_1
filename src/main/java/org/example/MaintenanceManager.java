@@ -10,15 +10,15 @@ public class MaintenanceManager {
         tareas = new ArrayList<>();
     }
 
-    public void programarTarea(MaintenanceTask tarea) {
-        tareas.add(tarea);
-        System.out.println("Tarea programada: " + tarea.getDescripcion() + " para el " + tarea.getFechaProgramada() + ".");
+    public void programarTarea(MaintenanceTask tareas) {
+        tareas.add(tareas);
+        System.out.println("Tarea programada: " + tareas.getDescripcion() + " para el " + tareas.getFechaProgramada() + ".");
     }
 
     public void seguimientoTareas() {
         System.out.println("\nTareas de Mantenimiento:");
-        for(MaintenanceTask tarea : tareas) {
-            System.out.println("Tarea: " + tarea.getDescription() + ", Fecha: " + tarea.getScheduledDate() + ", Estado: " + tarea.getStatus());
+        for(MaintenanceTask tareas : tareas) {
+            System.out.println("Tarea: " + tareas.getDescripcion() + ", Fecha: " + tareas.get() + ", Estado: " + tareas.getEstado());
         }
     }
 }
