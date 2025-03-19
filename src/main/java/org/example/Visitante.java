@@ -2,11 +2,11 @@ package org.example;
 
 import java.util.List;
 
-public class Visitor {
+public class Visitante {
     private String nombre;
     private List<String> intereses;
 
-    public Visitor(String nombre, List<String> intereses) {
+    public Visitante(String nombre, List<String> intereses) {
         this.nombre = nombre;
         this.intereses = intereses;
     }
