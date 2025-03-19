@@ -1,5 +1,19 @@
 package org.example;
 
+import org.example.cuidado.Ave;
+import org.example.cuidado.Mamifero;
+import org.example.cuidado.Reptil;
+import org.example.habitats.Acuatico;
+import org.example.habitats.Aviario;
+import org.example.habitats.Terrestre;
+import org.example.inventario.Inventario;
+import org.example.inventario.Recurso;
+import org.example.mantenimiento.MaintenanceManager;
+import org.example.mantenimiento.MaintenanceTask;
+import org.example.seguridad.SecuritySystem;
+import org.example.visitantes.VirtualGuide;
+import org.example.visitantes.Visitante;
+
 import java.time.LocalDate;
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.habitats;
 
 public class Habitat {
     private String nombre;

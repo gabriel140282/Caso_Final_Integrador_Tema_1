@@ -1,4 +1,4 @@
-package org.example;
+package org.example.habitats;
 
 public class Aviario extends Habitat {
     public Aviario(String nombre, double temperatura, double humedad, String limpieza) {

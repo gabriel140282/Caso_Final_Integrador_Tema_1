@@ -1,4 +1,6 @@
-package org.example;
+package org.example.cuidado;
+
+import org.example.habitats.Habitat;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

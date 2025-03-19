@@ -1,4 +1,4 @@
-package org.example;
+package org.example.visitantes;
 
 public class VirtualGuide {
     public void proveerTour(Visitante visitante) {

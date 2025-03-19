@@ -1,4 +1,4 @@
-package org.example;
+package org.example.habitats;
 
 public class Acuatico extends Habitat {
     private String calidadAgua;

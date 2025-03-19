@@ -1,4 +1,4 @@
-package org.example;
+package org.example.inventario;
 
 public class Recurso {
     private String nombre;

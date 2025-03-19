@@ -1,4 +1,4 @@
-package org.example;
+package org.example.habitats;
 
 public class Terrestre extends Habitat {
     public Terrestre(String nombre, double temperatura, double humedad, String limpieza) {

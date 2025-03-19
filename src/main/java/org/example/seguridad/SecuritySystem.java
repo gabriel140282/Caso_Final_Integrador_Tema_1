@@ -1,4 +1,4 @@
-package org.example;
+package org.example.seguridad;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

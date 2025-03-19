@@ -1,7 +1,9 @@
-package org.example;
+package org.example.cuidado;
 
-public class Mamifero extends Animal {
-    public Mamifero(String nombre, String especies, Habitat habitat) {
+import org.example.habitats.Habitat;
+
+public class Reptil extends Animal {
+    public Reptil(String nombre, String especies, Habitat habitat) {
         super(nombre, especies, habitat);
     }
 

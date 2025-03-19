@@ -1,7 +1,9 @@
-package org.example;
+package org.example.cuidado;
 
-public class Ave extends Animal {
-    public Ave(String nombre, String especies, Habitat habitat) {
+import org.example.habitats.Habitat;
+
+public class Mamifero extends Animal {
+    public Mamifero(String nombre, String especies, Habitat habitat) {
         super(nombre, especies, habitat);
     }
 
@@ -17,3 +19,4 @@ public class Ave extends Animal {
         System.out.println(getNombre() + " está mostrando su comportamiento natural.");
     }
 }
+
