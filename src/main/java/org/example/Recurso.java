@@ -1,11 +1,11 @@
 package org.example;
 
-public class Resource {
+public class Recurso {
     private String nombre;
     private int cantidad;
     private String proveedor;
 
-    public Resource(String nombre, int cantidad, String proveedor) {
+    public Recurso(String nombre, int cantidad, String proveedor) {
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.proveedor = proveedor;
