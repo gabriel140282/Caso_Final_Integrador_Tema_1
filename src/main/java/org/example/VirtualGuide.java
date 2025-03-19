@@ -1,7 +1,7 @@
 package org.example;
 
 public class VirtualGuide {
-    public void proveerTour(Visitor visitor) {
-        System.out.println("Proporcionando un tour virtual a " + visitor.getNombre());
+    public void proveerTour(Visitante visitante) {
+        System.out.println("Proporcionando un tour virtual a " + visitante.getNombre());
     }
 }
