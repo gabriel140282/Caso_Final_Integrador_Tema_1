@@ -3,26 +3,30 @@
 ' Definición de clases abstractas y sus subclases
 
 ' MÓDULO: Gestión de Hábitats
-abstract class Habitat {
-    - name: String
-    - temperature: double
-    - humidity: double
-    - cleanliness: String
-    + updateConditions(temperature: double, humidity: double, cleanliness: String): void
-    + monitor(): void <<abstract>>
+class Habitat {
+    - nombre: String
+    - temperatura: double
+    - humedad: double
+    - limpieza: String
+    + Habitat(String nombre, double temperatura, double humedad, String limpieza)
+    + actualizarCondiciones(double temperatura, double humedad, String limpieza) : void
+    + monitorHabitat() : void
 }
 
 class Acuatico {
-    - waterQuality: String
-    + monitor(): void
+    - calidadAgua: String
+    + Acuatico(String nombre, double temperatura, double humedad, String limpieza, String calidadAgua)
+    + monitorAcuatico(): void
 }
 
 class Terrestre {
-    + monitor(): void
+    + Terrestre(String nombre, double temperatura, double humedad, String limpieza)
+    + monitorTerrestre(): void
 }
 
 class Aviario {
-    + monitor(): void
+    + Aviario(String nombre, double temperatura, double humedad, String limpieza)
+    + monitorAviario(): void
 }
 
 Habitat <|-- Acuatico
@@ -30,27 +34,36 @@ Habitat <|-- Terrestre
 Habitat <|-- Aviario
 
 ' MÓDULO: Cuidado de los Animales
-abstract class Animal {
-    - name: String
-    - species: String
+class Animal {
+    - nombre: String
+    - especies: String
     - habitat: Habitat
-    - health: int
-    - lastFed: LocalDateTime
-    + feed(): void
-    + checkHealth(): void
-    + performBehavior(): void <<abstract>>
+    - salud: int
+    - horaUltimaComida: LocalDateTime
+    + alimentacion(): void
+    + chequeoSalud(): void
+    + monitorAnimal(): void
 }
 
 class Mamifero {
-    + performBehavior(): void
+    + Mamifero(String nombre, String especies, Habitat habitat)
+    + alimentar(): void
+    + chequear_salud(): void
+    + revisar_comportamiento(): void
 }
 
 class Ave {
-    + performBehavior(): void
+    + Ave(String nombre, String especies, Habitat habitat)
+    + alimentar(): void
+    + chequear_salud(): void
+    + revisar_comportamiento(): void
 }
 
 class Reptil {
-    + performBehavior(): void
+    + Reptil(String nombre, String especies, Habitat habitat)
+    + alimentar(): void
+    + chequear_salud(): void
+    + revisar_comportamiento(): void
 }
 
 Animal <|-- Mamifero
@@ -60,54 +73,54 @@ Animal <|-- Reptil
 Animal --> Habitat : "vive en"
 
 ' MÓDULO: Interacción con Visitantes
-class Visitor {
-    - name: String
-    - interests: List<String>
+class Visitante {
+    - nombre: String
+    - intereses: List<String>
+    + Visitante(String nombre, List<String> intereses)
 }
 
 class VirtualGuide {
-    + provideTour(visitor: Visitor): void
+    + proveerTour(Visitante visitante): void
 }
 
-VirtualGuide --> Visitor : "guía"
+VirtualGuide --> Visitante : "guía"
 
 ' MÓDULO: Administración de Recursos
-class Resource {
-    - name: String
-    - quantity: int
-    - supplier: String
+class Recurso {
+    - nombre: String
+    - cantidad: int
+    - proveedor: String
 }
 
-class Inventory {
-    - resources: Map<String, Resource>
-    + addResource(resource: Resource): void
-    + updateResource(name: String, quantity: int): void
-    + showInventory(): void
+class Inventario {
+    - recursos: ArrayList<>Recurso>
+    + aniadir_recurso(Recurso recurso): void
+    + mostrar_inventario(): void
+    + actualizar_recurso(String nombre, int nuevaCantidad): void
 }
 
-Inventory --> Resource : "contiene"
+Inventario --> Recurso : "contiene"
 
 ' MÓDULO: Mantenimiento y Seguridad
 class MaintenanceTask {
-    - description: String
-    - scheduledDate: LocalDate
-    - status: String
-    + updateStatus(status: String): void
+    - descripcion: String
+    - fechaProgramada: LocalDate
+    - estado: String
+    + actualizarEstado(String estado): void
 }
 
 class MaintenanceManager {
-    - tasks: List<MaintenanceTask>
-    + scheduleTask(task: MaintenanceTask): void
-    + trackTasks(): void
+    - tareas: List<MaintenanceTask>
+    + programarTarea(MaintenanceTask tarea): void
+    + seguimientoTareas(): void
 }
 
 class SecuritySystem {
-    - events: List<String>
+    - eventos: List<String>
     + monitorAccess(): void
     + recordEvents(): void
 }
 
 MaintenanceManager --> MaintenanceTask : "gestiona"
-SecuritySystem --> "registra" : "eventos"
 
 @enduml
